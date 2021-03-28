@@ -4,11 +4,12 @@
 using namespace std;
 int main() {
 	stack<int> s;
-	char str[200];
-	cin.getline(str, 200);
-	for (int i = 0; i < strlen(str); i++)
+	string str;
+	cin >> str;
+	char b = str[0];
+	for (int i = 0; i < str.size(); i++)
 	{
-		if (str[i] == '(') {
+		if (str[i] == b) {
 			s.push(i);
 		}else {
 			cout << s.top() <<" "<< i << endl;
